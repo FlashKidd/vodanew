@@ -275,7 +275,7 @@ foreach ($data as $value) {
     $cleanXavi = trim($xavi, '"');
     echo "\n Xavi Generated => $cleanXavi";
     $memory = validate_request($power,$number);
-    AttackLast($url,$cleanXavi,$number,$power,$memory,$increment,$uA,$flash,$nmt);
+    AttackLast($url,$cleanXavi,$number,$power,$memory,$increment,$uA,$flash);
     return json_encode($result);
 }
 
