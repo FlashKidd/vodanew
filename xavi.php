@@ -1,4 +1,5 @@
 <?php
+system('clear');
 //Business of the day
 require_once('Tools.php');
 
