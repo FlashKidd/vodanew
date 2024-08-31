@@ -8,7 +8,6 @@ $cookies = [
 "XSRF-TOKEN=eyJpdiI6InhYR1RlOGRzTmlFdFZjMENQQmZwRmc9PSIsInZhbHVlIjoid3JScFJOM3B2eWw4Q0FTcWRaRXhtTTc2aCtnOWlTUkg1UkhwRkh6OVl3SCtzZlVSM2ZNUkxGeXNBeUQyVWtGd0Vqb2t2RjZ6Uks5MjRTUWM0eFYwTWFkR2QzSkpDRURIbm9jUEIwSkpDSkplU1poWDNHSDAxWUdkNmJZZkVPQ2MiLCJtYWMiOiJlNjVmNDUwN2ZhMjI3MjIzYzJlMDMxZmY3Y2Y5YjhlZDdkMWMxNWRmYWQyMWNkYmQ3MTQyZWNhZWYzNTY5ZmNjIiwidGFnIjoiIn0%3D; vodacom_mzansi_games_session=eyJpdiI6Ik1nR2tmaUR0VW55S0c4K1prVDJ2aHc9PSIsInZhbHVlIjoiSHdZeVZnZUFYSzJybWtmVFNXT1lmWnRWa01XMFY1VFJiVzVhWVEya2ttOGtMeHJ6SDlzS0YxbzRzc2RSZXNROXdIdm9oUDZ1V01jM3lnZDZXVllPUSt5bE9nV1NqSm10b0FBT2NLdDIveURqc0wvTkNoaUI0VFlQMTdlV2tqYWwiLCJtYWMiOiI1ZDQ2OTRmYWQxMjJlY2VmNGI2NTE2ZWJlMDM1NTVmYTY2NGMwN2UyZGE1MmU2M2MzNDE3MzVmYjBkYzk4NDgwIiwidGFnIjoiIn0%3D",
 
   
-
   "XSRF-TOKEN=eyJpdiI6ImdqRGV0MWJLbnlNSmo0M0YxeWhSckE9PSIsInZhbHVlIjoiS2NRcm1FZ3JLZUxBUEo5NFZSRWpDemtzUlBqZjdobzFyRXl6cU51cGVueWUrTEZLWUoyMzV0MzloVitsY2hmajh3RGtLdmVtUWZhQVRUSGFyR0dic2ZkcjE4emowck5OSWN2UDYxSkc4Wmd5Z2cveFhsblZNcUZtVnhBZ25tbzYiLCJtYWMiOiIzZTNmNzlhZmE2MjQ5ZmFlYWU2NjY5NTU3MTgzZjEzZmJlZWFhZWU3MDVkNGZhMWQyYTE1MGE5NDJhNzQ4OTRlIiwidGFnIjoiIn0%3D; vodacom_mzansi_games_session=eyJpdiI6Im5LYWVxS08vSHEwcFIyeUluZ2xINWc9PSIsInZhbHVlIjoiVzNwZllFaGNuajdEdEIzaTR1TmpRUWlkUml2WWNtR3hEY29oeE9oMnlTZGNIcEdYa0NadjFrVzk2d3lqOGswak10UVJFSXBlV0l5VFBSRW5KM0NmaElHWkY5TndkUWNaVlQyb1pSaU42SUxqRVVzZ05JRExONkJSSlB5b2FXTDEiLCJtYWMiOiI1ZDg1Yzc2NDQ2NDQzZGU0NWUwNGYyZTZkOTc2Yzc5ODA3Mjg4YzVmM2JmNWNjODg4Y2Q5NWVhNjJkMjIzZjRiIiwidGFnIjoiIn0%3D",
 
 
@@ -17,7 +16,7 @@ $cookies = [
 ];
 foreach ($cookies as $cookie) {
 
-		
+        
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://play.mzansigames.club/play-now');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -93,15 +92,15 @@ foreach ($cookies as $cookie) {
         $score = rand($scoreTarget, ($scoreTarget+100));
 
         $increment = 1;
-		///////////////////////////
-		$uA = RandomUa();
-		//echo "\n<br>UA used => $uA\n";
-		$memory = validate_request($x_power,$score);
+        ///////////////////////////
+        $uA = RandomUa();
+        //echo "\n<br>UA used => $uA\n";
+        $memory = validate_request($x_power,$score);
         $OnePieceIsReal = generateRandomDivisionData($score,$redirectedUrl,$x_power,$memory,$increment,$uA);
 
 //defaultscore += Math.floor(Math.random() * (499 - 383 + 1)) + 383 + scoreAppender;
   //scoreAppender += defaultscore;);
-		
+        
 
 
 
