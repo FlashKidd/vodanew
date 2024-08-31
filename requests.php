@@ -4,7 +4,7 @@
 require_once '/var/www/html/vodanew/Zebra_cURL.php';
 $curl = new Zebra_cURL();
 $curl->cache('cache', 59);
-$curl->ssl(true, 2, 'cacert.pem');
+$curl->ssl(true, 2, '/var/www/html/cacert.pem');
 $curl->threads = 10;
 
 
@@ -26,7 +26,7 @@ $urls_ar = array();
 foreach ($c_values as $c) {
 
     
-  $url = 'https://67.207.90.206/vodanew/xavi.php?cookie=' . urlencode($c);
+  $url = 'http://67.207.90.206/vodanew/xavi.php?cookie=' . urlencode($c);
 
 
 array_push($urls_ar, $url);
