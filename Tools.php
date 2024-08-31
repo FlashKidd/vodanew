@@ -263,6 +263,7 @@ foreach ($data as $value) {
             $increment = 1;
         
            $power = Attack($url,$skore,$power,$memory,$increment,$uA);
+           sleep(10);
            
 }
     $flash = json_encode($result);
