@@ -4,9 +4,7 @@ require_once('Tools.php');
 system('clear');
     $scoreTarget = TargetScore();
 
-    if ($scoreTarget < 10000){
-        $scoreTarget = rand(10000,15000);
-    }
+    
 
 for ($i=0;$i<1;$i++){
 $cookies = [
@@ -100,7 +98,9 @@ foreach ($cookies as $cookie) {
         echo "<br> X-Powered-Version: $x_power\n";
         
         $score = rand($scoreTarget, ($scoreTarget+500));
-
+        if ($scoreTarget < 10000){
+        $score = rand(10000,15000);
+        }
         $increment = 1;
         ///////////////////////////
         $uA = RandomUa();
