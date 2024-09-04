@@ -99,7 +99,7 @@ foreach ($cookies as $cookie) {
         $x_power = X_Power($header);
         echo "<br> X-Powered-Version: $x_power\n";
         
-        $score = $scoreTarget;
+        $score = rand($scoreTarget, ($scoreTarget+500));
 
         $increment = 1;
         ///////////////////////////
