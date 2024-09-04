@@ -192,15 +192,18 @@ function generateRandomDivisionData($number,$url,$power,$memory,$increment,$uA) 
     $data[] = [[0]];
 
     $currentValue = $number;
-
+    $decide = 0;
     // Continue subtracting until the number is zero
     while ($currentValue > 0) {
         // Generate a random number between 200 and 600
         $randomValue = rand(75, 500);
-        
+         if ($decide >= 2) {
+           $randomValue = rand(400, 500);
+        }
+        $decide++;
         // Decrease the number by the random value, but don't go below 0
         $currentValue -= $randomValue;
-
+        //echo "\n<br> $randomValue $currentValue";
         // Ensure the number does not drop below 0
         if ($currentValue < 0) {
             $currentValue = 0;

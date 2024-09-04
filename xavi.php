@@ -1,7 +1,7 @@
 <?php
 //Business of the day
 require_once('Tools.php');
-
+system('clear');
     $scoreTarget = TargetScore();
 
     if ($scoreTarget < 10000){
