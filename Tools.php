@@ -157,7 +157,7 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
                 }
 
                 $x_power = X_Power($header);
-                sleep(15);
+                sleep(10);
                 return $x_power;
 }
         function GetXavi($unique_id,$game_id,$score,$array){
