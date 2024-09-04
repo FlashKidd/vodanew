@@ -157,7 +157,7 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
                 }
 
                 $x_power = X_Power($header);
-                sleep(10);
+                sleep(15);
                 return $x_power;
 }
         function GetXavi($unique_id,$game_id,$score,$array){
@@ -180,11 +180,11 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
 
 function generateRandomDivisionData($number,$url,$power,$memory,$increment,$uA) {
    $data = [];
-    $minValue = 75; // Initial minimum value
-    $maxValue = 500; // Initial maximum value
+    // Generate a random number between 200 and 600
+    $randomValue = rand(75, 500);
 
     // Check if the number can be reduced to zero in one step
-    if ($number <= $minValue) {
+    if ($number <= $randomValue) {
         return "0";
     }
 
@@ -193,65 +193,45 @@ function generateRandomDivisionData($number,$url,$power,$memory,$increment,$uA) 
 
     $currentValue = $number;
 
-    // Continue subtracting until the number is close to 1000
-    while ($currentValue > 1000) {
-        // Generate a random number between minValue and maxValue
-        $randomValue = rand($minValue, $maxValue);
+    // Continue subtracting until the number is zero
+    while ($currentValue > 0) {
+        // Generate a random number between 200 and 600
+        $randomValue = rand(75, 500);
         
-        // Decrease the number by the random value, but don't go below 1000
+        // Decrease the number by the random value, but don't go below 0
         $currentValue -= $randomValue;
 
-        // Ensure the number does not drop below 1000 until the final steps
-        if ($currentValue < 1000) {
-            $currentValue = 1000;
+        // Ensure the number does not drop below 0
+        if ($currentValue < 0) {
+            $currentValue = 0;
         }
 
-        // Add the current value to the data array
-        $data[] = [[$currentValue]];
-
-        // Increase minValue and maxValue by the randomValue for the next iteration
-        $minValue += $randomValue;
-        $maxValue += $randomValue;
+        // Add the current value to the data array only if it’s greater than zero
+        if ($currentValue > 0) {
+            $data[] = [[$currentValue]];
+            
+        }
     }
 
-    // Generate the final two values: x and y
-    $x = rand(500, 1000);
-    $y = rand(75, 500);
-
-    // Ensure that x is greater than y
-    while ($x <= $y) {
-        $x = rand(500, 1000);
-        $y = rand(75, 500);
-    }
-
-    // Subtract x from the current value
-    $currentValue -= $x;
-    $data[] = [[$currentValue]];
-
-    // Subtract y from the current value
-    $currentValue -= $y;
-    if ($currentValue < 0) {
-        $currentValue = 0;
-    }
-    $data[] = [[$currentValue]];
+    // Ensure that the last value is not zero if it was added already
     if (end($data)[0][0] == 0) {
         array_pop($data);
     }
+
     // Format the result into the JSON structure
     $result = [
         "c2array" => true,
         "size" => [count($data), 1, 1],
         "data" => $data
     ];
-
     $data = array_filter($data, function($value) {
-        return $value[0][0] != 0;
-    });
+    return $value[0][0] != 0;
+});
 
-    // Sort the data in ascending order
-    usort($data, function($a, $b) {
-        return $a[0][0] - $b[0][0];
-    });
+// Sort the data in ascending order
+usort($data, function($a, $b) {
+    return $a[0][0] - $b[0][0];
+});
 
 
 foreach ($data as $value) {
@@ -263,7 +243,6 @@ foreach ($data as $value) {
             $increment = 1;
         
            $power = Attack($url,$skore,$power,$memory,$increment,$uA);
-           sleep(10);
            
 }
     $flash = json_encode($result);
