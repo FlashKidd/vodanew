@@ -368,7 +368,7 @@ class Zebra_cURL {
             CURLOPT_MAXREDIRS           =>  50,
 
             // the maximum number of seconds to allow cURL functions to execute before timing out
-            CURLOPT_TIMEOUT             =>  30,
+            CURLOPT_TIMEOUT             =>  1200,
 
             // most services/websites will block requests with no/invalid user agents
             // note that the user agent string is random and will change whenever the library is instantiated!

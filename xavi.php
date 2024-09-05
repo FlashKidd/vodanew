@@ -2,11 +2,11 @@
 //Business of the day
 require_once('Tools.php');
 system('clear');
-    $scoreTarget = TargetScore();
+$scoreTarget = TargetScore();
 
     
 
-for ($i=0;$i<1;$i++){
+
 $cookies = [
 "XSRF-TOKEN=eyJpdiI6Imhxa1pyMGRXZG1MR0tEalZLc2pYaGc9PSIsInZhbHVlIjoiNGhHRnVYWEsxR3dwYzUvT09hbGZWbE1tczhaeXlXeHd2Y25PNnlHcFNTcXZ1SGN4RlgrcjF4aDFlMmZ1bis5eDZ6UHZNQWU4TDBkckt1SFAwMU44ZW9xVytFeUtxTGFnOWZzckJSYmNqQ00vaFZVMkRQc2w0aHUzeVc2bmFhaTIiLCJtYWMiOiIyYjRlMmM1ZTYxNTM5OGIzNzI3Yjg1MjUyYmQ0N2UyOWQzNmIyY2QyY2U4NjE0ZWEyMTlmMDRkZGUyMGQxNzc3IiwidGFnIjoiIn0%3D; vodacom_mzansi_games_session=eyJpdiI6IkRXSnkrOG5NeHJtZmk5RjJBUmlDb1E9PSIsInZhbHVlIjoiNGdkWHRwaTdKQ2htUVdoc3VEZGlmRWMvd0VlZmN4MHBKZmtxUmlKeGhET0p4OHU5RG9vajg3U1VodkNoK3JTWkpVK2pKcGprc2dBaU1VQXRxakpITXpIaUpWT2w5M3NxTGQxd3VhWnQyYjBMRHJDcTFRQ3NrVkFLY3NKZXZUZDkiLCJtYWMiOiI5OTRlZWU0Yjc1OTA3ZGQ5ZmJhMzJhZWIyYTg4ZTEwNjQ5MjBlZmVjYTc5Y2ZlZDI4ZjliMTU5Njg1MzlkYWY2IiwidGFnIjoiIn0%3D",
 
@@ -99,7 +99,7 @@ foreach ($cookies as $cookie) {
         
         $score = rand($scoreTarget, ($scoreTarget+500));
         if ($scoreTarget < 10000){
-        $score = rand(10000,15000);
+        $score = rand(15000,19000);
         }
         $increment = 1;
         ///////////////////////////
@@ -114,6 +114,6 @@ foreach ($cookies as $cookie) {
 
 
 
-}
+
 
 }
