@@ -30,7 +30,7 @@ function AttackLast($url,$xavi,$score,$power,$memory,$increment,$uA,$array){
             ];
             $jsonData = json_encode($data);
 
-            echo "\n<br> Json $jsonData";
+            echo "\nArray Data:<br> $jsonData";
 
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, 'https://play.mzansigames.club/aakado-mokalavo/'.$game_id.'/'.$unique_id.'');
@@ -151,9 +151,9 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
                 curl_close($ch);
                 //echo "ResultS: $curl";
                 if (strpos($curl, "Score info is stored successfully.")){
-                    echo "\nRequests was successful!";
+                    //echo "\nRequests was successful!";
                 }else{
-                    echo "\nServer error, or some shi!";
+                    //echo "\nServer error, or some shi!";
                 }
 
                 $x_power = X_Power($header);
@@ -172,7 +172,7 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
           'Content-Type: application/json'
         ));
         $response = curl_exec($ch);
-        "\nToken: $response\nFor $arrayJson";
+        //"\nToken: $response\nFor $arrayJson";
         return $response;
 
 }
@@ -240,7 +240,7 @@ usort($data, function($a, $b) {
 foreach ($data as $value) {
             
             $skore =  $value[0][0];
-            echo "\nSent $skore"; 
+            //echo "\nSent $skore"; 
             $powerBefore = $power;
             $memory = validate_request($power,$skore);
             $increment = 1;
@@ -273,9 +273,9 @@ function validate_request($fetchKey2, $LOP) {
             $emptyA .= $fetchKey2Array[$element];
         }
     }
-        echo "\nResult: " . $emptyA . "\n";
-        echo "XPoweredVersion: " . $fetchKey2 . "\n";
-        echo "DefaultScore: " . $LOP . "\n";
+        // echo "\nResult: " . $emptyA . "\n";
+        // echo "XPoweredVersion: " . $fetchKey2 . "\n";
+        // echo "DefaultScore: " . $LOP . "\n";
     return $emptyA;
 }
 
