@@ -185,7 +185,7 @@ function generateRandomDivisionData($number,$url,$power,$memory,$increment,$uA) 
 
     // Check if the number can be reduced to zero in one step
     if ($number <= $randomValue) {
-        return "0";
+       // return "0";
     }
 
     // Start with 0 as the first element
