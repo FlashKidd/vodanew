@@ -1,7 +1,7 @@
 <?php
 //Business of the day
 require_once('Tools-mtn.php');
-system('cls');
+system('clear');
 $scoreTarget = TargetScore();
 
     
