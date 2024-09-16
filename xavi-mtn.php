@@ -2,7 +2,7 @@
 //Business of the day
 require_once('Tools-mtn.php');
 system('cls');
-//$scoreTarget = TargetScore();
+$scoreTarget = TargetScore();
 
     
 
@@ -84,10 +84,10 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         $x_power = X_Power($header);
         echo "\n<br> X-Powered-Version: $x_power\n";
         
-        $score = rand(15000,17000);
-        // if ($scoreTarget < 10000){
-        // $score = rand(1000,2000);
-        // }
+        $score = rand(60,100);
+        if ($scoreTarget > 100){
+        $score = rand($scoreTarget,($scoreTarget)+200);
+        }
         $increment = 1;
         ///////////////////////////
         $uA = RandomUa();
