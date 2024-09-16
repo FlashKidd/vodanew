@@ -307,8 +307,8 @@ $player1ScoreNode = $xpath->query($player1ScoreQuery);
 $player2ScoreNode = $xpath->query($player2ScoreQuery);
 
 
-$defaultPlayer1Score = "1000"; 
-$defaultPlayer2Score = "10000"; 
+$defaultPlayer1Score = "100"; 
+$defaultPlayer2Score = "50"; 
 
 $player1Score = $player1ScoreNode->length > 0 ? trim(str_replace("Score:", "", $player1ScoreNode->item(0)->nodeValue)) : $defaultPlayer1Score;
 $player2Score = $player2ScoreNode->length > 0 ? trim(str_replace("Score:", "", $player2ScoreNode->item(0)->nodeValue)) : $defaultPlayer2Score;
