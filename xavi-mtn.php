@@ -86,7 +86,7 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         
         $score = rand(60,100);
         if ($scoreTarget > 80){
-        $score = rand($scoreTarget,($scoreTarget+200));
+        $score = rand($scoreTarget,($scoreTarget+5));
         }
         $increment = 1;
         ///////////////////////////
