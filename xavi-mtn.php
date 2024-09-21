@@ -85,8 +85,9 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         echo "\n<br> X-Powered-Version: $x_power\n";
         
         $score = rand(60,100);
+        $incremx = rand(10,30);
         if ($scoreTarget > 80){
-        $score = rand($scoreTarget,($scoreTarget+5));
+        $score = rand(($scoreTarget+$incremx),($scoreTarget+$score));
         }
         $increment = 1;
         ///////////////////////////
