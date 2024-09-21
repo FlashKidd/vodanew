@@ -85,7 +85,7 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         echo "\n<br> X-Powered-Version: $x_power\n";
         $score = rand(30000000,50000000);
         //$score = rand(30000000,50000000);
-         $score = rand(2140000000,2147480000);
+         //$score = rand(2140000000,2147480000);
         if ($scoreTarget >= 50000000){
         $score = rand(2140000000,2147480000);
         }
