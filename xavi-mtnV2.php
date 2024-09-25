@@ -83,11 +83,11 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         
         $x_power = X_Power($header);
         echo "\n<br> X-Powered-Version: $x_power\n";
-        $score = rand(2140000000,2147480000);
+        $score = 2147480000;
         //$score = rand(30000000,50000000);
          //$score = rand(2140000000,2147480000);
         if ($scoreTarget >= 50000000){
-        $score = rand(2147480000,2147480000);
+        $score = 2147480000;
         }
         $increment = 1;
         ///////////////////////////
