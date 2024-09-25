@@ -3,7 +3,9 @@
 require_once('Tools-mtn.php');
 system('clear');
 $scoreTarget = TargetScore();
-
+if ($scoreTarget > 10000){
+return;
+}
     
 
 
