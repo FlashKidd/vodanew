@@ -12,6 +12,7 @@ return;
 $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
 $position = GetPosition($cookie);
 
+echo "\nYou are at Position: $position\n");
 
         
         $ch = curl_init();
