@@ -71,7 +71,7 @@ if ($formattedPosition === '') {
 //echo "Your position is: " . $formattedPosition;
 //print_r($scores);
 
-return $scores[$formattedPosition];
+return $formattedPosition;
 }
 function RandomUa(){
     $userAgents = [
