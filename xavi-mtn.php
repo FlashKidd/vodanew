@@ -10,7 +10,7 @@ return;
 
 
 $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
-
+$position = GetPosition($cookie);
 
 
         
@@ -85,8 +85,15 @@ $cookie = isset($_GET['c']) ? trim($_GET['c']) : '';
         
         $x_power = X_Power($header);
         echo "\n<br> X-Powered-Version: $x_power\n";
-        
+
+        if ($position > 10){
+
+        $score = rand($scoreTarget,100);
+
+        }else{ 
         $score = rand(60,100);
+        }
+       
         $incremx = rand(70,150);
         if ($scoreTarget > 100){
         $score = rand(($scoreTarget+$incremx),($scoreTarget+$score));
