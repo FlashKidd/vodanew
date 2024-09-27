@@ -1,4 +1,5 @@
 <?php
+for ($i=0;$i<3;$i++){
 system('rm -rf cache');
 require_once '/var/www/html/vodanew/Zebra_cURL.php';
 $curl = new Zebra_cURL();
@@ -62,3 +63,4 @@ $curl->get($urls_ar, function($result) {
 $endtime = microtime(true);
 $duration = $endtime - $starttime;
 echo "Execution time: " . $duration . " seconds";
+}
