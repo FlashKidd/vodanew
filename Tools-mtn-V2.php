@@ -181,7 +181,7 @@ function Attack($url,$score,$power,$memory,$increment,$uA){
 function generateRandomDivisionData($number,$url,$power,$memory,$increment,$uA) {
  
     
-        $random_subtract = rand(0, 500);
+        $random_subtract = 500;
 
         if (($number - $random_subtract) > 0) {
             $resultFirst = $number - $random_subtract;
