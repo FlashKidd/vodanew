@@ -1,5 +1,5 @@
 <?php
-for ($i=0;$i<3;$i++){
+for ($i=0;$i<1;$i++){
 system('rm -rf cache');
 require_once '/var/www/html/vodanew/Zebra_cURL.php';
 $curl = new Zebra_cURL();
